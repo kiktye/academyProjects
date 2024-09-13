@@ -1,0 +1,518 @@
+@use "../abstracts/variables" as var;
+
+.form{
+    background-color: var.$color-primary;
+    height: 82.1vh;
+
+    .form-header{
+        text-align: center;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        font-size: 2.25em;
+        
+    }
+
+    .form-inner{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+  
+
+        label{
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        input{
+            width: 600px;
+            padding: 20px 35px 20px 20px;
+            font-style: italic;
+            border: 0;
+            border-radius: 7px;
+
+            
+        }
+
+        input::placeholder{
+            color: #afafafd3;
+        }
+
+        input:focus{
+            outline: 0;
+        }
+
+        
+
+
+        .groupOne{
+            display: flex;
+            margin-bottom: 20px;
+
+            .type-name, .type-company{
+                display: flex;
+                flex-direction: column; 
+                flex-basis: 50%;
+                margin: 0px 15px;                
+            }
+
+        }
+
+        .groupTwo{
+            display: flex;
+            margin-bottom: 20px;
+
+            .type-email, .type-mobile{
+                display: flex;
+                flex-direction: column; 
+                flex-basis: 50%;
+                margin: 0px 15px;
+            }
+        }
+
+        .groupThree{
+            display: flex;  
+            justify-content: center;
+            align-items: center;
+
+            .type-students{
+                display: flex;
+                flex-direction: column; 
+                flex-basis: 50%;
+                margin-right: 30px;
+
+                    .custom-select{
+                        position: relative;
+                        width: 600px;
+                    }
+
+                    .custom-select select{
+                        display: none;
+                    }
+
+                    .select-selected {
+                        background-color: #fff;
+                        color: #000;
+                    }
+
+                    .select-selected::after{
+                        position: absolute;
+                        content: "";
+                        top: 27.5px;
+                        right: 10px;
+                        width: 0;
+                        height: 0;
+                        border: 6px solid transparent;
+                        border-color: #000 transparent transparent transparent;
+                    }
+
+                    .select-selected.select-arrow-active:after{
+                        border-color: transparent transparent #000 transparent;
+                        top: 23px;
+                    }
+
+                    .select-items div,.select-selected{
+                        color: #000;
+                        font-weight: 600;
+                        padding: 20px 35px 20px 20px;
+                        border: 1px solid transparent;
+                        border-radius: 7px;
+                        border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+                        cursor: pointer;
+                    }
+
+                    .select-items{
+                        position: absolute;
+                        background-color: #fff;
+                        margin-top: 10px;
+                        border-radius: 7px;
+                        top: 100%;
+                        left: 0;
+                        right: 0;
+                        z-index: 99;
+                        box-shadow: 5px 7px 7px 2px rgba(50, 50, 50, 0.2)
+                    }
+
+                    .select-hide{
+                        display: none;
+                    }
+
+                    .select-items div:hover, .same-as-selected{
+                        background-color: rgba(0, 0, 0, 0.1);
+                    }
+            }
+
+        }
+    }
+
+
+    .error{
+        display: none;
+        color: var.$color-accent;
+        font-style: italic;
+        font-size: 0.7rem;
+        // margin-top: 5px;
+    }
+
+    .error.visible{
+        display: block;
+    }
+}
+
+
+
+@media (max-width: 1440px){
+    .form{
+    
+        .form-header{
+            font-size: 1.25rem;
+            padding-top: 4rem;
+            padding-bottom: 5.5rem;
+            h1{
+                margin-bottom: 10px;
+            }
+        }
+    
+    .form-inner{
+        flex-direction: column;
+    
+        label{
+            font-size: 1rem;
+        }
+    
+        input{
+            width: 475px;
+            padding: 15px 30px 15px 15px;
+            margin-bottom: 5px;
+        }
+    
+        input::placeholder{
+            font-size: 0.75rem;
+        }
+    
+        .groupOne{
+            flex-direction: row;
+            margin-bottom: 5px;
+
+        }
+    
+        .groupTwo{
+            flex-direction: row;
+            margin-bottom: 5px;
+
+
+        }
+    
+        .groupThree{
+            flex-direction: row;
+            // width: 320px;
+    
+            .type-students{
+                flex-basis: 50%;
+                margin: 0;
+                margin-right: 25px;
+                .custom-select{
+                    width: 475px;
+                }
+    
+                .select-items div,.select-selected{
+                    padding: 15px 30px 15px 15px;
+                    font-size: 0.85rem;
+                }
+    
+                .select-items div{
+                    padding: 10px 25px 10px 10px;
+                }
+    
+                .select-items{
+                    margin-top: 10px;
+                }
+    
+                .select-selected::after{
+                    top: 40%;
+                }
+    
+                .select-selected.select-arrow-active:after{
+                    top: 35%;
+                }
+            }
+    
+    
+    
+    
+            button{
+                width: 475px;
+                height: 45px;
+                flex-basis: 50%;
+            }
+        }
+    }
+    }
+    }
+
+@media (max-width: 1024px){
+    .form{
+    
+        .form-header{
+            font-size: 1.25rem;
+            padding-top: 4rem;
+            padding-bottom: 3.5rem;
+            h1{
+                margin-bottom: 0;
+            }
+        }
+    
+    .form-inner{
+        flex-direction: column;
+    
+        label{
+            font-size: 1rem;
+        }
+    
+        input{
+            width: 375px;
+            padding: 15px 30px 15px 15px;
+            margin-bottom: 5px;
+        }
+    
+        input::placeholder{
+            font-size: 0.75rem;
+        }
+    
+        .groupOne{
+            flex-direction: row;
+            margin-bottom: 5px;
+
+        }
+    
+        .groupTwo{
+            flex-direction: row;
+            margin-bottom: 5px;
+
+
+        }
+    
+        .groupThree{
+            flex-direction: row;
+            // width: 320px;
+    
+            .type-students{
+                flex-basis: 50%;
+                margin: 0;
+                margin-right: 25px;
+                .custom-select{
+                    width: 375px;
+                }
+    
+                .select-items div,.select-selected{
+                    padding: 15px 30px 15px 15px;
+                    font-size: 0.85rem;
+                }
+    
+                .select-items div{
+                    padding: 10px 25px 10px 10px;
+                }
+    
+                .select-items{
+                    margin-top: 10px;
+                }
+    
+                .select-selected::after{
+                    top: 40%;
+                }
+    
+                .select-selected.select-arrow-active:after{
+                    top: 35%;
+                }
+            }
+    
+    
+    
+    
+            button{
+                width: 375px;
+                height: 45px;
+                flex-basis: 50%;
+            }
+        }
+    }
+    }
+    }
+
+@media (max-width: 900px){
+    .form{
+    
+        .form-header{
+            font-size: 1.25rem;
+            padding-top: 3.5rem;
+            padding-bottom: 1.5rem;
+            h1{
+                margin-bottom: 45px;
+            }
+        }
+    
+    .form-inner{
+        flex-direction: column;
+    
+        label{
+            font-size: 1rem;
+        }
+    
+        input{
+            width: 275px;
+            padding: 15px 30px 15px 15px;
+            margin-bottom: 5px;
+        }
+    
+        input::placeholder{
+            font-size: 0.75rem;
+        }
+    
+        .groupOne{
+            flex-direction: row;
+            margin-bottom: 5px;
+
+        }
+    
+        .groupTwo{
+            flex-direction: row;
+            margin-bottom: 5px;
+
+
+        }
+    
+        .groupThree{
+            flex-direction: row;
+            // width: 320px;
+    
+            .type-students{
+                flex-basis: 50%;
+                margin: 0;
+                margin-right: 25px;
+                .custom-select{
+                    width: 290px;
+                }
+    
+                .select-items div,.select-selected{
+                    padding: 15px 30px 15px 15px;
+                    font-size: 0.85rem;
+                }
+    
+                .select-items div{
+                    padding: 10px 25px 10px 10px;
+                }
+    
+                .select-items{
+                    margin-top: 10px;
+                }
+    
+                .select-selected::after{
+                    top: 40%;
+                }
+    
+                .select-selected.select-arrow-active:after{
+                    top: 35%;
+                }
+            }
+    
+    
+    
+    
+            button{
+                width: 275px;
+                height: 45px;
+                flex-basis: 50%;
+            }
+        }
+    }
+    }
+    }
+
+@media (max-width: 620px){
+.form{
+
+    .form-header{
+        font-size: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        h1{
+            margin-bottom: 0;
+        }
+    }
+
+.form-inner{
+    flex-direction: column;
+
+    label{
+        font-size: 0.8rem;
+    }
+
+    input{
+        width: 100%;
+        padding: 15px 30px 15px 15px;
+        margin-bottom: 5px;
+    }
+
+    input::placeholder{
+        font-size: 0.75rem;
+    }
+
+    .groupOne{
+        flex-direction: column;
+        width: 320px;
+        margin-bottom: 5px;
+    }
+
+    .groupTwo{
+        flex-direction: column;
+        width: 320px;
+        margin-bottom: 5px;
+    }
+
+    .groupThree{
+        flex-direction: column;
+        width: 320px;
+
+        .type-students{
+            flex-basis: 100%;
+            margin: 0;
+
+            .custom-select{
+                width: 290px;
+            }
+
+            .select-items div,.select-selected{
+                padding: 15px 30px 15px 15px;
+                font-size: 0.85rem;
+            }
+
+            .select-items div{
+                padding: 10px 25px 10px 10px;
+            }
+
+            .select-items{
+                margin-top: 2px;
+            }
+
+            .select-selected::after{
+                top: 40%;
+            }
+
+            .select-selected.select-arrow-active:after{
+                top: 35%;
+            }
+        }
+
+
+
+
+        button{
+            margin-top: 161px;
+            width: 290px;
+        }
+    }
+}
+}
+}
+

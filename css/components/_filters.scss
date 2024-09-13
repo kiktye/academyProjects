@@ -1,0 +1,57 @@
+@use "../abstracts/variables" as var;
+
+.filters {
+  input {
+    display: none;
+  }
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  background-color: var.$color-secondary;
+  flex-direction: row;
+
+  .filterLabel {
+    display: flex;
+    justify-content: space-between;
+    // align-items: center;
+    padding: 2.5rem 3rem 1rem 3rem;
+    cursor: pointer;
+    flex-basis: 33.3333%;
+
+    &:not(:last-child) {
+      border-right: 1px solid #464646;
+    }
+
+    p {
+      color: #fff;
+      flex-basis: 80%;
+    }
+
+    i {
+      color: var.$color-secondary;
+      font-size: 2.5rem;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .filters {
+    flex-direction: column;
+
+    .filterLabel {
+      align-items: center;
+
+      i {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+.filterLabel.is-active {
+  background-color: var.$color-danger;
+
+  p {
+    color: var.$color-secondary;
+  }
+}

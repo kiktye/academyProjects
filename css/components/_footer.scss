@@ -1,0 +1,24 @@
+@use '../abstracts/variables' as var;
+
+
+footer {
+    background-color: var.$color-secondary;
+    text-align: center;
+    padding: 15px;
+    //  letter-spacing: ;
+  
+    h5 {
+      margin: 0;
+      color: #fff;
+    }
+    i {
+      color: var.$color-danger;
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media (max-width: 375px){
+    h5{
+      font-size: 0.8rem;
+    }
+  }

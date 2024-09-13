@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Brainster Labs is a platform(project) where students from Brainster's marketing, design, and programming academies showcase the projects they have created."
+    />
+    <meta name="author" content="Kiko Stojanov" />
+    <!-- FONT AWESOME -->
+    <script
+      src="https://kit.fontawesome.com/0d6f25b6d2.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Hire Form - Brainster Labs | Project01 Kiko Stojanov FS15</title>
+
+    <!-- CSS STYLE SHEET FILE -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-logo">
+        <a href="./index.html"
+          ><img src="./images/logo.png" alt="logo-brainster"
+        /></a>
+      </div>
+
+      <div class="nav-links" id="menu">
+        <li class="link">
+          <a href="https://brainster.co/marketing/" target="_blank"
+            >Академија за маркетинг</a
+          >
+        </li>
+        <li class="link">
+          <a href="https://brainster.co/full-stack/" target="_blank"
+            >Академија за програмирање</a
+          >
+        </li>
+        <li class="link">
+          <a href="https://brainster.co/data-science/" target="_blank"
+            >Академија за data science</a
+          >
+        </li>
+        <li class="link">
+          <a href="https://brainster.co/graphic-design/" target="_blank"
+            >Академија за дизајн</a
+          >
+        </li>
+        <a href="./hire-form.html" class="hire-btn">Вработи наш студент</a>
+      </div>
+
+      <button class="hamburger">
+        <div class="bars">
+          <span class="bar top"></span>
+          <span class="bar middle"></span>
+          <span class="bar bottom"></span>
+        </div>
+      </button>
+
+      <div class="mobile-nav">
+        <li class="link">
+          <a href="https://brainster.co/marketing/" target="_blank"
+            >Академија за маркетинг</a
+          >
+        </li>
+        <li class="link">
+          <a href="https://brainster.co/full-stack/" target="_blank"
+            >Академија за програмирање</a
+          >
+        </li>
+        <li class="link">
+          <a href="https://brainster.co/data-science/" target="_blank"
+            >Академија за data science</a
+          >
+        </li>
+        <li class="link">
+          <a href="https://brainster.co/graphic-design/" target="_blank"
+            >Академија за дизајн</a
+          >
+        </li>
+        <a href="./hire-form.html" class="hire-btn">Вработи наш студент</a>
+      </div>
+    </nav>
+
+    <div class="form">
+      <div class="form-header">
+        <h1>Вработи Студенти</h1>
+      </div>
+
+      <form class="form-inner" id="form" method="GET">
+        <div class="groupOne">
+          <div class="type-name input-control">
+            <label for="name">Име и презиме</label>
+            <input type="text" id="name" placeholder="Вашето име и презиме" />
+            <div id="nameError" class="error">Внесете име и презиме</div>
+          </div>
+
+          <div class="type-company input-control">
+            <label for="companyName">Име на компанија</label>
+            <input
+              type="text"
+              id="companyName"
+              placeholder="Име на вашата компанија"
+            />
+            <div id="companyError" class="error">
+              Внесете го името на вашата компанија
+            </div>
+          </div>
+        </div>
+
+        <div class="groupTwo">
+          <div class="type-email input-control">
+            <label for="email">Контакт e-mail</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Контакт e-mail на вашата компанија"
+            />
+            <div id="emailError" class="error">
+              Внесете валидна e-mail адреса
+            </div>
+          </div>
+
+          <div class="type-mobile input-control">
+            <label for="phonenr">Контакт телефон</label>
+            <input
+              type="tel"
+              id="phonenr"
+              name="phonenr"
+              placeholder="Контакт телефон на вашата компанија"
+            />
+            <div id="phoneError" class="error">
+              Внесете валиден телефон за контакт
+            </div>
+          </div>
+        </div>
+
+        <div class="groupThree">
+          <div class="type-students input-control">
+            <label for="studentOptions">Тип на студенти</label>
+
+            <div class="custom-select">
+              <select name="studentOptions" id="studentOptions">
+                <option value="0">Изберете тип на студент</option>
+                <option value="studentMarketing">Студенти од маркетинг</option>
+                <option value="studentCoding">Студенти од програмирање</option>
+                <option value="studentData">Студенти од data-science</option>
+                <option value="studentDesign">Студенти од дизајн</option>
+              </select>
+            </div>
+            <div id="studentError" class="error">Одберете тип на студенти</div>
+          </div>
+
+          <div class="type-button">
+            <button type="submit" value="submit" class="form-btn">
+              ИСПРАТИ
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <footer>
+      <h5>
+        Изработено со СРЦЕ <i class="fa-solid fa-heart"></i> од студентите на
+        Brainster
+      </h5>
+    </footer>
+    <script src="./js/navbar.js"></script>
+    <script src="./js/filtering.js"></script>
+    <script src="./js/checkbox.js"></script>
+    <script src="./js/showmore.js"></script>
+    <script src="./js/option.js"></script>
+    <script src="./js/validation.js"></script>
+  </body>
+</html>
